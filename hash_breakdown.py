@@ -1,5 +1,3 @@
-import itertools
-
 
 def hash(st):
     """
