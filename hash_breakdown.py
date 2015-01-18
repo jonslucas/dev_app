@@ -4,8 +4,6 @@ import itertools
 def hash(st):
     """
     Base-37 counter. Increments on a 0-15 scale based on letts (below).
-    (base_scale) + (x*37**n), where base_scale is derived from the letter position
-    in the 'letts' string and x is the number of times that base has incremented.
     """
     letts = 'acdegilmnoprstuw'
     h = 7
