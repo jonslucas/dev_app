@@ -9,12 +9,11 @@ def hash(st):
         h = (h*37+letts.index((st[i])))
     return h
 
-def machine():
-    targ = 945924806726376
+def machine(targ, str_len=9):
     init = hash('aaaaaaaaa')
     diff = targ-init
-    i = 8
-    counter =[0,0,0,0,0,0,0,0,0]
+    i = str_len - 1 #shift to zero index
+    counter =[0 for c in xrange(str_len)]
     while i >= 0:
         x = diff/37**i
         counter[i]=x
@@ -31,7 +30,12 @@ def parse_to_string(c):
     return ''.join([letts[i] for i in c[::-1]])
 
 def main():
-    print parse_to_string(machine())
+    #Gen_dev
+    tar1 = 945924806726376
+    #T_dev
+    tar2 = 914117715920704
+    print parse_to_string(machine(tar1))
+    print parse_to_string(machine(tar2))
 
 
 if __name__ == "__main__":
