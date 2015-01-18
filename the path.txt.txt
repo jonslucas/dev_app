@@ -1,0 +1,1254 @@
+Python 2.7.9 (default, Dec 10 2014, 12:24:55) [MSC v.1500 32 bit (Intel)] on win32
+Type "copyright", "credits" or "license()" for more information.
+>>> ================================ RESTART ================================
+>>> 
+>>> p = itertools.product('acdegilmnoprstuw', repeat=9)
+>>> pn = p.next()
+>>> hash(pn)
+909732178565539L
+>>> hash(pn)
+909732178565539L
+>>> pn
+('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a')
+>>> pn
+('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a')
+>>> hash(p.next())
+909732178565540L
+>>> hash(p.next())
+909732178565541L
+>>> hash(p.next())
+909732178565542L
+>>> hash(p.next())
+909732178565543L
+>>> hash(p.next())
+909732178565544L
+>>> hash(p.next())
+909732178565545L
+>>> hash(p.next())
+909732178565546L
+>>> hash(p.next())
+909732178565547L
+>>> hash(p.next())
+909732178565548L
+hash(p.next())
+>>> 
+>>> hash(p.next())
+909732178565549L
+>>> hash(p.next())
+909732178565550L
+>>> hash(p.next())
+909732178565551L
+>>> hash(p.next())
+909732178565552L
+>>> hash(p.next())
+909732178565553L
+>>> hash(p.next())
+>>> hash(p.next())
+909732178565554L
+>>> hash(p.next())
+909732178565576L
+>>> hash(p.next())
+909732178565577L
+>>> hash(p.next())
+909732178565578L
+>>> hash(p.next())
+909732178565579L
+>>> hash(p.next())
+909732178565580L
+hash(p.next())
+>>> 
+>>> hash(p.next())
+909732178565581L
+>>> hash(p.next())
+>>> hash(p.next())
+909732178565582L
+hash(p.next())
+>>> hash(p.next())
+909732178565583L
+>>> hash(p.next())
+909732178565584L
+>>> xrange(3)
+xrange(3)
+>>> for i in xrange(3):
+	print i
+
+	
+0
+1
+2
+>>> p = itertools.product('acdegilmnoprstuw', repeat=9)
+>>> look_up= list(p)
+
+Traceback (most recent call last):
+  File "<pyshell#39>", line 1, in <module>
+    look_up= list(p)
+MemoryError
+>>> p = itertools.product('acdegilmnoprstuw', repeat=9)
+>>> lup = {}
+>>> for i in xrange(9):
+	lup[i] = p.next()
+	break
+return
+SyntaxError: invalid syntax
+>>> for i in xrange(17):
+	lup[i] = p.next()
+
+	
+>>> for k,v in lup.items():
+	print "{} : {}".format(k, v)
+
+	
+0 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a')
+1 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'c')
+2 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'd')
+3 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'e')
+4 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'g')
+5 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'i')
+6 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'l')
+7 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'm')
+8 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'n')
+9 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'o')
+10 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'p')
+11 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'r')
+12 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 's')
+13 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 't')
+14 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'u')
+15 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'w')
+16 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'a')
+>>> dir()
+['__builtins__', '__doc__', '__file__', '__name__', '__package__', 'attempt', 'chars', 'hash', 'i', 'in_dat', 'itertools', 'k', 'lup', 'p', 'perm', 'pn', 'tpl_sort', 'trial', 'v']
+>>> for k,v in lup.items():
+	print "{} : {} - {}".format(k, v, hash(v))
+
+	
+0 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a') - 909732178565539
+1 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'c') - 909732178565540
+2 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'd') - 909732178565541
+3 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'e') - 909732178565542
+4 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'g') - 909732178565543
+5 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'i') - 909732178565544
+6 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'l') - 909732178565545
+7 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'm') - 909732178565546
+8 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'n') - 909732178565547
+9 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'o') - 909732178565548
+10 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'p') - 909732178565549
+11 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'r') - 909732178565550
+12 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 's') - 909732178565551
+13 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 't') - 909732178565552
+14 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'u') - 909732178565553
+15 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'w') - 909732178565554
+16 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'a') - 909732178565576
+>>> for i in xrange(17):
+	lup[i+16] = p.next()
+
+	
+>>> for k,v in lup.items():
+	print "{} : {} - {}".format(k, v, hash(v))
+
+	
+0 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a') - 909732178565539
+1 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'c') - 909732178565540
+2 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'd') - 909732178565541
+3 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'e') - 909732178565542
+4 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'g') - 909732178565543
+5 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'i') - 909732178565544
+6 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'l') - 909732178565545
+7 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'm') - 909732178565546
+8 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'n') - 909732178565547
+9 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'o') - 909732178565548
+10 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'p') - 909732178565549
+11 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'r') - 909732178565550
+12 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 's') - 909732178565551
+13 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 't') - 909732178565552
+14 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'u') - 909732178565553
+15 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'w') - 909732178565554
+16 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'c') - 909732178565577
+17 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'd') - 909732178565578
+18 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'e') - 909732178565579
+19 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'g') - 909732178565580
+20 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'i') - 909732178565581
+21 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'l') - 909732178565582
+22 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'm') - 909732178565583
+23 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'n') - 909732178565584
+24 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'o') - 909732178565585
+25 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'p') - 909732178565586
+26 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'r') - 909732178565587
+27 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 's') - 909732178565588
+28 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 't') - 909732178565589
+29 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'u') - 909732178565590
+30 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'c', 'w') - 909732178565591
+31 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'a') - 909732178565613
+32 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'c') - 909732178565614
+>>> len('acdegilmnoprstuw')
+16
+>>> for k,v in lup.items():
+	curH=hash(v)
+	
+	print "{} : {} - {}".format(k, v, hash(v)):
+		
+SyntaxError: invalid syntax
+>>> 909732178565577 - 909732178565554
+23L
+>>> 909732178565613 - 909732178565591
+22L
+>>> for i in xrange(17):
+	lup[i+32] = p.next()
+
+	
+>>> for k,v in lup.items():
+	if k>30:
+		print "{} : {} - {}".format(k, v, hash(v))
+
+		
+31 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'a') - 909732178565613
+32 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'd') - 909732178565615
+33 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'e') - 909732178565616
+34 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'g') - 909732178565617
+35 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'i') - 909732178565618
+36 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'l') - 909732178565619
+37 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'm') - 909732178565620
+38 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'n') - 909732178565621
+39 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'o') - 909732178565622
+40 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'p') - 909732178565623
+41 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'r') - 909732178565624
+42 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 's') - 909732178565625
+43 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 't') - 909732178565626
+44 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'u') - 909732178565627
+45 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'd', 'w') - 909732178565628
+46 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'e', 'a') - 909732178565650
+47 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'e', 'c') - 909732178565651
+48 : ('a', 'a', 'a', 'a', 'a', 'a', 'a', 'e', 'd') - 909732178565652
+>>> hash(lup[32])
+909732178565615L
+>>> p = itertools.product('acdegilmnoprstuw', repeat=9)
+>>> for i in xrange(64):
+	lup[i] = p.next()
+
+	
+>>> hshs = [hash(v) for v in lup.values]
+
+Traceback (most recent call last):
+  File "<pyshell#73>", line 1, in <module>
+    hshs = [hash(v) for v in lup.values]
+TypeError: 'builtin_function_or_method' object is not iterable
+>>> hshs = [hash(v) for v in lup.values()]
+>>> hshs[16]
+909732178565576L
+>>> hshs[15:17]
+[909732178565554L, 909732178565576L]
+>>> hshs[16]-hshs[15]
+22L
+>>> hshs[32]-hshs[31]
+22L
+>>> for i in xrange(64):
+	lup[i+64] = p.next()
+
+	
+>>> for i in xrange(128):
+	lup[i+128] = p.next()
+
+	
+>>> for i in xrange(256):
+	lup[i+256] = p.next()
+
+	
+>>> for i in xrange(512):
+	lup[i+512] = p.next()
+
+	
+>>> for i in xrange(1024):
+	lup[i+1024] = p.next()
+
+	
+>>> for i in xrange(1024):
+	lup[i+1024] = p.next()
+
+	
+>>> for i in xrange(1024):
+	lup[i+(1024*2)] = p.next()
+
+	
+>>> for i in xrange(1024):
+	lup[i+(1024*3)] = p.next()
+
+	
+>>> for i in xrange(1024):
+	lup[i+(1024*4)] = p.next()
+
+	
+>>> for i in xrange(1024):
+	lup[i+(1024*5)] = p.next()
+
+	
+>>> len(lup)
+6144
+>>> lup.last()
+
+Traceback (most recent call last):
+  File "<pyshell#100>", line 1, in <module>
+    lup.last()
+AttributeError: 'dict' object has no attribute 'last'
+>>> lup[6144]
+
+Traceback (most recent call last):
+  File "<pyshell#101>", line 1, in <module>
+    lup[6144]
+KeyError: 6144
+>>> lup[6143]
+('a', 'a', 'a', 'a', 'a', 'c', 'r', 'w', 'w')
+>>> 1024*5
+5120
+>>> p = itertools.product('acdegilmnoprstuw', repeat=9)
+>>> 16**9
+68719476736L
+>>> 16**9/2
+34359738368L
+>>> 16**9/4
+17179869184L
+>>> 16**9/8
+8589934592L
+>>> for i in xrange(8589934592):
+	lup[i] = p.next()
+
+	
+
+Traceback (most recent call last):
+  File "<pyshell#111>", line 1, in <module>
+    for i in xrange(8589934592):
+OverflowError: Python int too large to convert to C long
+>>> 16**9/24
+2863311530L
+>>> 16**9/100
+687194767L
+>>> 16**9/1000
+68719476L
+>>> 16**9/100000
+687194L
+>>> 16**9/1000000
+68719L
+>>> for i in xrange(400000000):
+	lup[i] = p.next()
+
+	
+
+Traceback (most recent call last):
+  File "<pyshell#118>", line 2, in <module>
+    lup[i] = p.next()
+MemoryError
+>>> for i in xrange(40000000):
+	lup[i] = p.next()
+
+	
+
+Traceback (most recent call last):
+  File "<pyshell#120>", line 2, in <module>
+    lup[i] = p.next()
+MemoryError
+>>> for i in xrange(999999999):
+	lup[i] = p.next()
+
+	
+
+Traceback (most recent call last):
+  File "<pyshell#122>", line 2, in <module>
+    lup[i] = p.next()
+MemoryError
+>>> for i in xrange(9999999999):
+	lup[i] = p.next()
+
+	
+
+Traceback (most recent call last):
+  File "<pyshell#124>", line 1, in <module>
+    for i in xrange(9999999999):
+OverflowError: Python int too large to convert to C long
+>>> for i in xrange(100000):
+	lup[i] = p.next()
+
+	
+>>> for i in xrange(100000):
+	lup[i+100000] = p.next()
+
+	
+>>> for i in xrange(100000):
+	lup[i+(2*100000)] = p.next()
+KeyboardInterrupt
+>>> for i in xrange((2*100000)):
+	lup[i+(2*100000)] = p.next()
+
+	
+>>> for i in xrange((3*100000)):
+	lup[i+(3*100000)] = p.next()
+
+	
+>>> len(lup)
+2796205
+>>> hash(len(2796204))
+
+Traceback (most recent call last):
+  File "<pyshell#135>", line 1, in <module>
+    hash(len(2796204))
+TypeError: object of type 'int' has no len()
+>>> hash(lup[2796204])
+909732733317198L
+>>> for i in xrange(1000000):
+	lup[i] = p.next()
+
+	
+>>> for i in xrange(10000000):
+	lup[i] = p.next()
+
+	
+
+Traceback (most recent call last):
+  File "<pyshell#140>", line 2, in <module>
+    lup[i] = p.next()
+MemoryError
+>>> for i in xrange(9999999):
+	lup[i] = p.next()
+
+	
+
+Traceback (most recent call last):
+  File "<pyshell#142>", line 2, in <module>
+    lup[i] = p.next()
+MemoryError
+>>> for i in xrange(1000000):
+	lup[i] = p.next()
+	
+KeyboardInterrupt
+>>> p.next()
+('a', 'a', 'a', 'u', 'w', 'g', 'l', 'a', 'c')
+>>> for i in xrange(1000000):
+	lup[i] = p.next()
+	
+KeyboardInterrupt
+>>> p.next()
+('a', 'a', 'a', 'u', 'w', 'g', 'l', 'a', 'd')
+>>> len(lup)
+2796207
+>>> lup2 ={}
+>>> for i in xrange(1000000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1000000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1000000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1000000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1000000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1000000):
+	lup2[i] = p.next()
+
+	
+>>> len(lup2)
+1000000
+>>> len(lup2)/2
+500000
+>>> c = len(lup2)/2
+>>> hash(lup[c])
+909733033351603L
+>>> for i in xrange(5000000):
+	lup2[i] = p.next()
+
+	
+
+Traceback (most recent call last):
+  File "<pyshell#166>", line 2, in <module>
+    lup2[i] = p.next()
+MemoryError
+>>> for i in xrange(2500000):
+	lup2[i] = p.next()
+
+	
+
+Traceback (most recent call last):
+  File "<pyshell#168>", line 2, in <module>
+    lup2[i] = p.next()
+MemoryError
+>>> for i in xrange(1250000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1250000):
+	lup2[i] = p.next()
+
+	
+>>> hash(lup[c])
+909733033351603L
+>>> for i in xrange(1250000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1250000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1250000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1250000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1250000):
+	lup2[i] = p.next()
+
+	
+
+>>> for i in xrange(1250000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1250000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1250000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1250000):
+	lup2[i] = p.next()
+
+	
+>>> for i in xrange(1250000):
+	lup2[i] = p.next()
+
+	
+>>> for r in xrange(64):
+	print "{} - {}".format(i, hash(lup2[i]))
+
+	
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+1249999 - 909737675754085
+>>> lst = [ hash(lup2[i]) for i in xrange(64)]
+>>> lst2 = [(lst[i]-lst[i-1]) for i in xrange(64)]
+>>> lst2
+[-126L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 22L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 22L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 22L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L, 1L]
+>>> for i in lst2:
+	print "{} : {} +={}".format(i, lst[i], lst2[i])
+
+	
+
+Traceback (most recent call last):
+  File "<pyshell#205>", line 2, in <module>
+    print "{} : {} +={}".format(i, lst[i], lst2[i])
+IndexError: list index out of range
+>>> len(lst)
+64
+>>> len(lst2)
+64
+>>> lst[64]
+
+Traceback (most recent call last):
+  File "<pyshell#208>", line 1, in <module>
+    lst[64]
+IndexError: list index out of range
+>>> for i in xrange(64):
+	print "{} : {} +={}".format(i, lst[i], lst2[i])
+
+	
+0 : 909737600733795 +=-126
+1 : 909737600733796 +=1
+2 : 909737600733797 +=1
+3 : 909737600733798 +=1
+4 : 909737600733799 +=1
+5 : 909737600733800 +=1
+6 : 909737600733801 +=1
+7 : 909737600733802 +=1
+8 : 909737600733803 +=1
+9 : 909737600733804 +=1
+10 : 909737600733805 +=1
+11 : 909737600733806 +=1
+12 : 909737600733807 +=1
+13 : 909737600733808 +=1
+14 : 909737600733809 +=1
+15 : 909737600733810 +=1
+16 : 909737600733832 +=22
+17 : 909737600733833 +=1
+18 : 909737600733834 +=1
+19 : 909737600733835 +=1
+20 : 909737600733836 +=1
+21 : 909737600733837 +=1
+22 : 909737600733838 +=1
+23 : 909737600733839 +=1
+24 : 909737600733840 +=1
+25 : 909737600733841 +=1
+26 : 909737600733842 +=1
+27 : 909737600733843 +=1
+28 : 909737600733844 +=1
+29 : 909737600733845 +=1
+30 : 909737600733846 +=1
+31 : 909737600733847 +=1
+32 : 909737600733869 +=22
+33 : 909737600733870 +=1
+34 : 909737600733871 +=1
+35 : 909737600733872 +=1
+36 : 909737600733873 +=1
+37 : 909737600733874 +=1
+38 : 909737600733875 +=1
+39 : 909737600733876 +=1
+40 : 909737600733877 +=1
+41 : 909737600733878 +=1
+42 : 909737600733879 +=1
+43 : 909737600733880 +=1
+44 : 909737600733881 +=1
+45 : 909737600733882 +=1
+46 : 909737600733883 +=1
+47 : 909737600733884 +=1
+48 : 909737600733906 +=22
+49 : 909737600733907 +=1
+50 : 909737600733908 +=1
+51 : 909737600733909 +=1
+52 : 909737600733910 +=1
+53 : 909737600733911 +=1
+54 : 909737600733912 +=1
+55 : 909737600733913 +=1
+56 : 909737600733914 +=1
+57 : 909737600733915 +=1
+58 : 909737600733916 +=1
+59 : 909737600733917 +=1
+60 : 909737600733918 +=1
+61 : 909737600733919 +=1
+62 : 909737600733920 +=1
+63 : 909737600733921 +=1
+>>> p = itertools.product('acdegilmnoprstuw', repeat=9)
+>>> hash(p.next())
+909732178565539L
+>>> x = 909732178565539L
+>>> x + (16**9)
+909800898042275L
+>>> x = 909732178565539L
+>>> t = (((((((((7*37+9)*32+9)*37+9)*37+9)*37+9)*37+9)*37+9)*37+9)*37+9)
+>>> t
+815013898156088L
+>>> t+x
+1724746076721627L
+>>> t = (((((((((7*37+16)*37+16)*37+16)*37+16)*37+16)*37+16)*37+16)*37+16)*37+16)
+>>> t+x
+1877225130373334L
+>>> t1 = (((((((((7*37+16)*37+16)*37+16)*37+16)*37+16)*37+16)*37+16)*37+16)*37+16)
+>>> t-x
+57760773242256L
+>>> x2 = (((((((((7*37)*37)*37)*37)*37)*37)*37)*37)*37)
+>>> x2
+909732178565539L
+>>> x2 == x
+True
+>>> 16**9
+68719476736L
+>>> x3 = x2/37
+>>> ((x3+1)37) - x
+SyntaxError: invalid syntax
+>>> ((x3+1)*37) - x
+37L
+>>> x3
+24587356177447L
+>>> x3 += 1
+>>> x3
+24587356177448L
+>>> x3*37
+909732178565576L
+>>> 909732178565576L - x
+37L
+>>> x4 = (((((((((7*37)*37)*37)*37)*37)*37)*37)*37+1)*37)
+>>> 909732178565576L == x4
+True
+>>> t = (((((((((7*37+9)*37+9)*37+9)*37+9)*37+9)*37+9)*37+9)*37+9)*37+9)
+>>> t
+942222613514308L
+>>> 7*37
+259
+>>> 7*(37**9)
+909732178565539L
+>>> 7*(37**9) == x
+True
+>>> 7*(37**10) == x4
+False
+>>> 7*(37**10)
+33660090606924943L
+>>> 7*(37**9)
+909732178565539L
+>>> t1 = (((((((((7*37+15)*37+15)*37+15)*37+15)*37+15)*37+15)*37+15)*37+15)*37+15)
+>>> t1 - x
+54150724914615L
+>>> t1
+963882903480154L
+>>> d = (t1-x)/2
+>>> d
+27075362457307L
+>>> t1-d
+936807541022847L
+>>> d2 = (t1-(t1-d))/2
+>>> t1-d2
+950345222251501L
+>>> d3 = (t1-(t1-d2))/2
+>>> buck = {}
+>>> d3+d
+33844203071633L
+>>> d3+(t1-d)
+943576381637173L
+>>> for i in xrange(10, 13):
+	j = 9
+	while j != 0:
+		h = 7*37
+		
+KeyboardInterrupt
+>>> def quick_calc(val, numb):
+	if numb = 0:
+		
+SyntaxError: invalid syntax
+>>> def quick_calc(val, numb):
+	h = 7*37
+	if numb == 0:
+		return val
+	else:
+		h
+KeyboardInterrupt
+>>> x4 = (((((((((7*37)*37)*37)*37)*37)*37)*37+1)*37)*37)
+>>> x4-x
+1369L
+>>> x
+909732178565539L
+>>> x4 = (((((((((7*37)*37)*37)*37)*37)*37)*37)*37)*37)
+KeyboardInterrupt
+>>> x4 = (((((((((7*37)*37)*37)*37)*37)*37+1)*37)*37)*37)
+>>> x4-x
+50653L
+>>> 945924806726376 - x
+36192628160837L
+>>> x4 = (((((((((7*37)*37)*37)*37)*37)*37+1)*37)*37)*37)
+>>> 37*2
+74
+>>> 37**2
+1369
+>>> for i in xrange(17):
+	if 37**i<36192628160837L:
+		continue
+	else:
+		print i
+
+		
+9
+10
+11
+12
+13
+14
+15
+16
+>>> 37**8< 36192628160837L
+True
+>>> 36192628160837L-(37**8)
+32680148706916L
+>>> def counter(val):
+	for i in xrange(10):
+		if 37**i>val:
+			return i-1
+
+		
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	counter = '000000000'
+	while dif != 0:
+		c = counter(dif)
+		dif -= 37**(c)
+		if dif < 16:
+			counter[c-1] += dif
+			dif = 0
+		else:
+			counter[c] = 1
+	return reversed(counter)
+
+>>> machine()
+
+Traceback (most recent call last):
+  File "<pyshell#301>", line 1, in <module>
+    machine()
+  File "<pyshell#300>", line 6, in machine
+    c = counter(dif)
+TypeError: 'str' object is not callable
+>>> def counter(val):
+	for i in xrange(10):
+		if 37**i>val:
+			return i-1
+
+		
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = '000000000'
+	while dif != 0:
+		c = counter(dif)
+		dif -= 37**(c)
+		if dif < 16:
+			countr[c-1] += dif
+			dif = 0
+		else:
+			countr[c] = 1
+	return reversed(countr)
+
+>>> machine()
+
+Traceback (most recent call last):
+  File "<pyshell#306>", line 1, in <module>
+    machine()
+  File "<pyshell#305>", line 12, in machine
+    countr[c] = 1
+TypeError: 'str' object does not support item assignment
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = ['0','0','0','0','0','0','0','0','0']
+	while dif != 0:
+		c = counter(dif)
+		dif -= 37**(c)
+		if dif < 16:
+			countr[c-1] += dif
+			dif = 0
+		else:
+			countr[c] = 1
+	return ''.join(reversed(countr))
+
+>>> machine()
+
+Traceback (most recent call last):
+  File "<pyshell#309>", line 1, in <module>
+    machine()
+  File "<pyshell#308>", line 9, in machine
+    countr[c-1] += dif
+TypeError: cannot concatenate 'str' and 'long' objects
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = [0,0,0,0,0,0,0,0,0]
+	while dif != 0:
+		c = counter(dif)
+		dif -= 37**(c)
+		if dif < 16:
+			countr[c-1] += dif
+			dif = 0
+		else:
+			countr[c] = 1
+	return ''.join(reversed(countr))
+
+>>> machine()
+
+Traceback (most recent call last):
+  File "<pyshell#312>", line 1, in <module>
+    machine()
+  File "<pyshell#311>", line 13, in machine
+    return ''.join(reversed(countr))
+TypeError: sequence item 0: expected string, int found
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = [0,0,0,0,0,0,0,0,0]
+	while dif != 0:
+		c = counter(dif)
+		dif -= 37**(c)
+		if dif < 16:
+			countr[c-1] += dif
+			dif = 0
+		else:
+			countr[c] = 1
+	return countr
+
+>>> machine()
+[3L, 1, 0, 1, 1, 1, 1, 1, 1]
+>>> l = machine()
+>>> l[9]
+
+Traceback (most recent call last):
+  File "<pyshell#318>", line 1, in <module>
+    l[9]
+IndexError: list index out of range
+>>> l[8]
+1
+>>> v = 'ccccccacd'
+>>> hash(v)
+913342226891812L
+>>> v = 'ccccccace'
+>>> hash(v)
+913342226891813L
+>>> hash(reversed(v))
+
+Traceback (most recent call last):
+  File "<pyshell#324>", line 1, in <module>
+    hash(reversed(v))
+  File "C:\Users\Dylan\Downloads\application_fun.py", line 54, in hash
+    ##    'aaaaaaaaa'->7*37*37
+TypeError: object of type 'reversed' has no len()
+>>> reversed(v)
+<reversed object at 0x02DFA790>
+>>> print reversed(v)
+<reversed object at 0x02DFA6F0>
+>>> hash(v[::-1])
+920364620074613L
+>>> dif = 36192628160837L
+>>> counter(dif)
+8
+>>> dif2 = dif - 37**8
+>>> 
+>>> dif2
+32680148706916L
+>>> countr = [0,0,0,0,0,0,0,0,0]
+>>> countr[7] = 1
+>>> counter(dif2)
+8
+>>> countr[7] = 2
+>>> 37**2
+1369
+>>> dif = 36192628160837L
+>>> dif/37**8
+10L
+>>> 37**8
+3512479453921L
+>>> 3512479453921L*10
+35124794539210L
+>>> dif2 = dif - 35124794539210L
+>>> counter(dif2)
+7
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = [0,0,0,0,0,0,0,0,0]
+	while dif != 0:
+		c = counter(dif)
+		d = 37**(c)
+		if dif < 16:
+			countr[c-1] += dif
+			dif = 0
+		else:
+			countr[c-1] = dif/d
+			dif = dif - (
+	return countr
+KeyboardInterrupt
+>>> dif 2
+SyntaxError: invalid syntax
+>>> dif2
+1067833621627L
+>>> dif
+36192628160837L
+>>> dif/37.**8
+10.304011350282767
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = [0,0,0,0,0,0,0,0,0]
+	while dif != 0:
+		c = counter(dif)
+		d = dif /37**c
+		countr[c-1] = d
+		dif  = dif - (d*(37**8))
+		dif <16:
+			
+SyntaxError: invalid syntax
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = [0,0,0,0,0,0,0,0,0]
+	while dif != 0:
+		c = counter(dif)
+		d = dif /37**c
+		countr[c-1] = d
+		dif  = dif - (d*(37**8))
+		if dif <16:
+			counter[c-2] = dif
+			dif = 0
+
+			
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = [0,0,0,0,0,0,0,0,0]
+	while dif != 0:
+		c = counter(dif)
+		d = dif /37**c
+		countr[c-1] = d
+		dif  = dif - (d*(37**8))
+		if dif <16:
+			counter[c-2] = dif
+			dif = 0
+	return countr
+
+>>> a = machine()
+
+Traceback (most recent call last):
+  File "<pyshell#361>", line 1, in <module>
+    a = machine()
+  File "<pyshell#360>", line 11, in machine
+    counter[c-2] = dif
+TypeError: 'function' object does not support item assignment
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = [0,0,0,0,0,0,0,0,0]
+	while dif != 0:
+		c = counter(dif)
+		d = dif /37**c
+		countr[c-1] = d
+		dif  = dif - (d*(37**8))
+		if dif <16:
+			countr[c-2] = dif
+			dif = 0
+	return countr
+
+>>> a = machine()
+>>> a
+[0, 0, 0, 0, 0, -37569440371504L, 11L, 10L, 0]
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = [0,0,0,0,0,0,0,0,0]
+	while dif != 0:
+		c = counter(dif)
+		d = dif /37**c
+		countr[c-1] = d
+		dif  = dif - (d*(37**c))
+		if dif <16:
+			countr[c-2] = dif
+			dif = 0
+	return countr
+
+>>> a = machine()
+>>> a
+[2L, 0, 8L, 3L, 7L, 9L, 11L, 10L, 3L]
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = [0,0,0,0,0,0,0,0,0]
+	while dif != 0:
+		c = counter(dif)
+		d = dif /37**c
+		countr[c-1] = d
+		dif  = dif - (d*(37**c))
+		if dif <16:
+			return countr, dif
+##			countr[c-2] = dif
+##			dif = 0
+##	return countr
+
+>>> a, dif = machine()
+>>> a
+[2L, 0, 8L, 3L, 7L, 9L, 11L, 10L, 0]
+>>> dif
+3L
+>>> ref = 'acdegilmnoprstuw'
+>>> cup = []
+>>> for i in a[::-1]:
+	cup.append(ref[i]
+
+		   )
+
+	
+>>> cup
+['a', 'p', 'r', 'o', 'm', 'e', 'n', 'a', 'd']
+>>> hash(cup)
+910710357705021L
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = [0,0,0,0,0,0,0,0,0]
+	while dif != 0:
+		c = counter(dif)
+		d = dif /37**c
+		countr[c-1] = d
+		dif  = dif - (d*(37**c))
+		if dif <16:
+			return countr, dif
+##			countr[c-2] = dif
+##			dif = 0
+##	return countr
+
+		
+>>> def machine():
+	dif = 36192628160837L
+	#counter in reverse position
+	countr = [0,0,0,0,0,0,0,0,0]
+	while dif != 0:
+		c = counter(dif)
+		d = dif %37**c
+		countr[c-1] = d
+		dif  = dif - (d*(37**c))
+		if dif <16:
+			return countr, dif
+##			countr[c-2] = dif
+##			dif = 0
+##	return countr
+
+		
+>>> a, dif = machine()
+>>> a
+[0, 0, 0, 0, 0, 0, 0, 1067833621627L, 0]
+>>> dif = 36192628160837L
+>>> counter(dif)
+8
+>>> dif % 37**8
+1067833621627L
+>>> x = dif % 37**8
+>>> dif -x / 37**8
+36192628160837L
+>>> s = 'opnldmacd'
+>>> hash(s)
+942314758400104L
+>>> 945924806726376 - hash(s)
+3610048326272L
+>>> 37**3
+50653
+>>> 37**8
+3512479453921L
+>>> z = 'ppnldmacd'
+>>> hash(z)
+945827237854025L
+>>> 945924806726376 - hash(z)
+97568872351L
+>>> 37**7
+94931877133L
+>>> z = 'promenbde'
+>>> 945924806726376 - hash(z)
+
+Traceback (most recent call last):
+  File "<pyshell#405>", line 1, in <module>
+    945924806726376 - hash(z)
+  File "C:\Users\Dylan\Downloads\application_fun.py", line 55, in hash
+ValueError: substring not found
+>>> hash(z)
+
+Traceback (most recent call last):
+  File "<pyshell#406>", line 1, in <module>
+    hash(z)
+  File "C:\Users\Dylan\Downloads\application_fun.py", line 55, in hash
+ValueError: substring not found
+>>> z = 'promencde'
+>>> 945924806726376 - hash(z)
+-1369L
+>>> 37**2
+1369
+>>> s= 'promenade'
+>>> hash(s)
+945924806726376L
+>>> def machine():
+	targ = 945924806726376
+	init = hash('aaaaaaaaa')
+	diff = targ-init
+	i = 8
+	counter =[0,0,0,0,0,0,0,0,0]
+	while i >= 0:
+		x = diff/37**i
+		counter[i]=x
+		diff -=((37**i)*x)
+		i -=1
+	return counter
+
+>>> a = machine()
+>>> a
+[3L, 2L, 0L, 8L, 3L, 7L, 9L, 11L, 10L]
+>>> def machine():
+	targ = 945924806726376
+	init = hash('aaaaaaaaa')
+	diff = targ-init
+	i = 8
+	counter =[0,0,0,0,0,0,0,0,0]
+	while i >= 0:
+		x = diff/37**i
+		counter[i]=x
+		diff -=((37**i)*x)
+		i -=1
+	return counter, diff
+
+>>> a, d = machine()
+>>> d
+0L
+>>> a
+[3L, 2L, 0L, 8L, 3L, 7L, 9L, 11L, 10L]
+>>> targ = 945924806726376
+>>> init = hash('aaaaaaaaa')
+>>> diff = targ-init
+>>> init
+909732178565539L
+>>> diff
+36192628160837L
+>>> ================================ RESTART ================================
+>>> 
+promenade
+>>> ================================ RESTART ================================
+>>> 
+promenade
+>>> 
